@@ -1,0 +1,143 @@
+@import "bourbon";
+@import "bourbon","neat";
+body{
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.nav{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  @include outer-container;
+  h1{
+    @include span-columns(2);
+    line-height: 13px;
+  }
+  ul{
+    @include span-columns(10, block);
+  }
+  li{
+    list-style: none;
+    display: inline;
+    float: right;
+    padding-left: 2em;
+    margin-top: 0;
+    color:#949494;
+
+  }
+  li:hover{
+    color:black;
+    @include transition(all 0.15s ease-out 0s);
+    cursor: pointer;
+  }
+}
+.image-container{
+  @include outer-container;
+  img{
+    @include span-columns(12);
+    opacity: 0.8;
+  }
+  h1{
+    position:absolute;
+    text-align: center;
+    @include span-columns(10);
+    color: white;
+    font-weight: 600;
+    top:45%;
+    font-size: 4em;
+  }
+}
+.textsec{
+  @include outer-container;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  h1{
+    @include span-columns(4, block);
+    font-size: 2.4em;
+    padding-top: 1.2em;
+    @include shift(1);
+  }
+  p{
+    @include span-columns(6, block);
+    font-weight: 100;
+    line-height: 1.3em;
+    font-size: 2em;
+    color:#a8a8a8;
+  }
+
+}
+.bgtext{
+  @include outer-container;
+  background-color: #ececec;
+  padding-top: 40px;
+  margin-bottom:30px;
+}
+.foliosec{
+  @include outer-container;
+  margin-bottom: 50px;
+  img{
+    @include span-columns(4, block);
+    max-width: 100%;
+    @include filter(grayscale(100%));
+  }
+  img:hover{
+    @include filter(grayscale(0%));
+    @include transition(all 0.15s ease-out 0s);
+
+  }
+}
+.textthree{
+  @include outer-container;
+  margin-bottom: 30px;
+  .three{
+    background-color: #252525;
+
+    height: 300px;
+
+    @include span-columns(4, block);
+    color:white;
+    bottom:10px;
+    display: table-cell;
+       vertical-align: bottom;
+           text-align: center;
+    border-right: 2px solid white;
+
+  }
+  .three:hover{
+    opacity: 0.4;
+    @include transition(all 0.15s ease-out 0s);
+  }
+  .three:last-child{
+    border-right: none;
+
+
+  }
+
+}
+.footer{
+  h1{
+    @include span-columns(12, block);
+    @include shift(1);
+    font-weight: 100;
+    margin-bottom: 0;
+  }
+  h5{
+    margin-top: 0;
+
+    @include span-columns(5, block);
+    @include shift(1);
+    padding-bottom: 50px;
+
+  }
+
+
+}
+.pattern{
+  margin-bottom: 100px;
+
+  @include outer-container;
+  height: 10px;
+background: -webkit-linear-gradient(left, #252525 0%,#050505 25%,#949494 25%,#949494 50%,#252525 50%,#252525 75%,#949494 75%,#949494 100%,#949494 100%);
+
+}
